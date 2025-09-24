@@ -1,0 +1,27 @@
+﻿.title-linked {
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+.btn-eli, .btn-ver-doc, .btn-des, .btn-pdf, .btn-doc, .btn-historial, .texver {
+    cursor: pointer;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+.lbl-error {
+    color:#e73631;
+    font-size: 12px;
+    padding-top:4px;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}

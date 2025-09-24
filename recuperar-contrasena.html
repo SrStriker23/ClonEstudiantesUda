@@ -1,0 +1,131 @@
+
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- Mirrored from estudiante.uda.cl/recuperar-contrasena by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Sep 2025 23:39:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,maximun-scale= 1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portal de alumnos en línea</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainba76.css?203833" />
+    <script type="text/javascript" src="js/sha1.js"></script>
+    <link rel="stylesheet" href="css/appba76.css?203833" />
+</head>
+<body class="login no-padd">
+    <main class="main-wrapper">
+        
+
+
+<div class="login-blockleft">
+    <h1 class="logo-layer">
+        <img src="img/logo-bettersoft.svg" alt="logo">
+    </h1>
+    <h3>
+        Portal de estudiantes
+    </h3>
+    <div id="dvRecuperar" class="mod-newpwd">
+        <a href="login-2.html" class="btn-newpwd"><i class="far fa-arrow-circle-left"></i>¿Olvidaste tu contraseña?</a>
+        <p>Ingrese su usuario para poder <br>recuperar su contraseña.</p>
+        <span id="user-no-valid" class="msj d-none"></span>
+        <form action="#" autocomplete="off">
+            <fieldset>
+                <i class="fal fa-user"></i>
+                <input type="text" id="user" name="user" placeholder="Usuario">
+            </fieldset>
+            <span id="user-req-field" class="msj d-none"><i class="far fa-exclamation-circle"></i>Este campo es obligatorio</span>
+            <p>* Campo obligatorio</p>
+            <fieldset class="wrap-submit">
+                <input type="submit" id="btnForgot" name="" value="Recuperar">
+            </fieldset>
+        </form>
+    </div>    
+    <div class="blockleft-bottom">
+        <img src="img/logo-bettersoft.png" alt="logo">
+        <p>Con la tecnología  de Bettersoft</p>
+    </div>
+</div>
+<div class="login-blockright">
+    <h2>Bienvenido al portal de estudiantes</h2>
+    <div class="dothese">
+        <p>Al ingresar podrás:</p>
+        <ul>
+            <li>Hacer tu toma de ramos</li>
+            <li>Ver tu información académica</li>
+            <li>Consultar tu información financiera</li>
+            <li>Realizar otros procesos más</li>
+        </ul>
+    </div>
+</div>
+    </main>
+
+    
+    <div id="lb-mensaje-error" class="wrap-salir wrap-confirm ">
+        <div class="confirm-in">
+            <div class="confirm-wrapin">
+                <a href="#" class="close-lb"><i class="far fa-times-circle"></i></a>
+                <p id="lb-titulo-error"></p>
+                <div class="buttons-cofirm">
+                    <input type="button" id="alert-ok" value="Aceptar">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer id="menu-inferior" class="main-footer"></footer>
+    <div class="preloader home" id="preloader-home" style="display: none;"><img src="img/loader-home.gif" alt=""></div>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.6.0.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/loginba76.js?203833"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script>
+        var rutaWeb = 'index.html';
+        var uInterfaz = '1031';
+        var pInterfaz = '6367c48dd193d56ea7b0baad25b19455e529f5ee';
+        let rutaAzure = 'bettersoft.cl';
+        let keyAzure = '99400d0b-258c-453a-8c9a-cf54e0b1efcd';
+        let msalOffice = "0";
+        let loginDual = 'NO';
+
+        $('#alert-ok').on('click', function (e) {
+            e.preventDefault();
+
+            let inicioSso = sessionStorage.getItem("ingreso-sso");
+
+            if (inicioSso == "SI" && msalOffice == "1") {
+                logoutAd(sessionStorage.getItem("homeId"));
+            }
+        });
+    </script>
+    
+    <script id="tmpMenuInferior" type="text/html">
+        {{#menu_inferior}}
+        <div class="helpdesk">
+            <h4 id="lblHelpdesk">Helpdesk: </h4>
+            <ul>
+                {{#hasPhone}}
+                <li><a href="tel:{{telefono}}"><i class="fal fa-phone"></i>{{telefono}}</a></li>
+                {{/hasPhone}}
+                {{#hasWhats}}
+                <li><a href="whatsapp://call?number={{whatsapp}}"><i class="fab fa-whatsapp"></i>{{whatsapp}}</a></li>
+                {{/hasWhats}}
+                {{#hasCorreo}}
+                <li><a href="mailto:{{correo}}"><i class="fal fa-envelope"></i>{{correo}}</a></li>
+                {{/hasCorreo}}
+            </ul>
+        </div>
+        {{/menu_inferior}}
+    </script>
+</body>
+
+<!-- Mirrored from estudiante.uda.cl/recuperar-contrasena by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Sep 2025 23:39:53 GMT -->
+</html>
